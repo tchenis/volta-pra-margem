@@ -1844,7 +1844,7 @@ h1, h2, h3, h4, .tipo-placa {
 }
 
 /* ==========================================================================
-   SEÇÃO DEPOIMENTOS REAIS (Mensagens Reais de Clientes via WhatsApp)
+   SEÇÃO DEPOIMENTOS REAIS (Cards Limpos e Modernos)
    ========================================================================== */
 .secao-depoimentos {
   background-color: var(--areia);
@@ -1870,115 +1870,78 @@ h1, h2, h3, h4, .tipo-placa {
 }
 
 .grid-depoimentos {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
-  max-width: 1040px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-@media (min-width: 680px) {
-  .grid-depoimentos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid-depoimentos {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.card-depoimento-zap {
+.card-depoimento {
   background-color: var(--branco);
-  border: 1.5px solid var(--areia-escuro);
-  border-radius: 14px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 16px rgba(15, 46, 61, 0.06);
+  border: 1px solid rgba(15, 46, 61, 0.1);
+  border-radius: 16px;
+  padding: 2.25rem 1.75rem 1.75rem;
+  box-shadow: 0 4px 16px rgba(15, 46, 61, 0.05);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: transform var(--transicao-rapida), box-shadow var(--transicao-rapida);
-}
-
-.card-depoimento-zap:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(15, 46, 61, 0.12);
-}
-
-.depoimento-topo {
-  display: flex;
   align-items: center;
-  gap: 0.85rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--areia-escuro);
+  text-align: center;
+  flex: 1 1 320px;
+  max-width: 345px;
+  min-width: 280px;
+  transition: transform var(--transicao-rapida), box-shadow var(--transicao-rapida), border-color var(--transicao-rapida);
 }
 
-.depoimento-avatar {
-  width: 44px;
-  height: 44px;
+.card-depoimento:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(15, 46, 61, 0.09);
+  border-color: var(--verde-agua);
+}
+
+.depoimento-avatar-icone {
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background-color: var(--azul-rio);
-  color: var(--areia);
-  font-family: var(--font-titulo);
-  font-size: 1.25rem;
-  font-weight: 700;
+  background-color: #E2E8F0;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1.25rem;
   flex-shrink: 0;
 }
 
-.depoimento-autor-info {
-  display: flex;
-  flex-direction: column;
+.depoimento-avatar-icone svg {
+  width: 34px;
+  height: 34px;
+  fill: #94A3B8;
 }
 
-.depoimento-nome {
+.depoimento-texto {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0 0 1.25rem 0;
+  font-style: normal;
+  flex-grow: 1;
+}
+
+.depoimento-estrelas {
+  display: inline-flex;
+  gap: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.depoimento-estrelas svg {
+  width: 19px;
+  height: 19px;
+  fill: #F59E0B;
+}
+
+.depoimento-autor-nome {
   font-family: var(--font-corpo);
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--azul-rio);
-}
-
-.depoimento-badge-zap {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.8rem;
-  color: #128C7E; /* Verde oficial WhatsApp */
-  font-weight: 600;
-}
-
-.depoimento-badge-zap svg {
-  width: 14px;
-  height: 14px;
-}
-
-.depoimento-balao {
-  background-color: #E7F7F4;
-  border-left: 3.5px solid #25D366;
-  border-radius: 8px;
-  padding: 1rem 1.15rem;
-  margin-bottom: 0.85rem;
-  font-size: 0.98rem;
-  line-height: 1.55;
-  color: var(--grafite);
-  font-style: normal;
-}
-
-.depoimento-rodape-zap {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.35rem;
-  font-size: 0.8rem;
-  color: #718096;
-}
-
-.depoimento-rodape-zap svg {
-  width: 16px;
-  height: 16px;
-  color: #34B7F1; /* Azul duplo check WhatsApp */
 }
