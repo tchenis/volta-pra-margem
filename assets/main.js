@@ -343,6 +343,38 @@ function inicializarFaq() {
 }
 
 // ==========================================================================
+// 8. ABINHAS DE DEPOIMENTOS
+// ==========================================================================
+function inicializarTabsDepoimentos() {
+  const tabBotoes = document.querySelectorAll('.depoimento-tab-btn');
+  const tabPaineis = document.querySelectorAll('.depoimento-tab-painel');
+  if (!tabBotoes.length || !tabPaineis.length) return;
+
+  tabBotoes.forEach(botao => {
+    botao.addEventListener('click', () => {
+      const targetId = botao.getAttribute('data-tab');
+
+      tabBotoes.forEach(b => {
+        b.classList.remove('ativo');
+        b.setAttribute('aria-selected', 'false');
+      });
+      tabPaineis.forEach(p => {
+        p.classList.remove('ativo');
+        p.hidden = true;
+      });
+
+      botao.classList.add('ativo');
+      botao.setAttribute('aria-selected', 'true');
+      const painelAtivo = document.getElementById(targetId);
+      if (painelAtivo) {
+        painelAtivo.classList.add('ativo');
+        painelAtivo.hidden = false;
+      }
+    });
+  });
+}
+
+// ==========================================================================
 // INICIALIZAÇÃO AO CARREGAR O DOM
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -352,4 +384,5 @@ document.addEventListener('DOMContentLoaded', () => {
   inicializarBarraMobile();
   inicializarQuiz();
   inicializarFaq();
+  inicializarTabsDepoimentos();
 });

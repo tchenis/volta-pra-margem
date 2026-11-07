@@ -565,105 +565,56 @@
   </section>
 
   <!-- ==========================================================================
-       DEPOIMENTOS REAIS
+       DEPOIMENTOS (Abas Limpas sem Ícones)
        ========================================================================== -->
   <section class="secao-depoimentos" id="depoimentos">
     <div class="container">
       <div class="depoimentos-cabecalho">
-        <span class="pre-titulo">FEEDBACK REAL DE QUEM JÁ NAVEGA COM O GUIA</span>
         <h2 class="titulo-secao">O QUE DIZEM OS PESCADORES</h2>
-        <p>Depoimentos de quem pilota o próprio barco e já colocou o material em prática na água:</p>
+        <p>Relatos reais de quem comprou e usa o material:</p>
       </div>
 
-      <div class="grid-depoimentos">
-        <!-- Depoimento 1: Carlos -->
-        <div class="card-depoimento">
-          <div class="depoimento-avatar-icone" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-            </svg>
-          </div>
-          <p class="depoimento-texto">"Gostei muito da compra! O guia é extremamente completo, tem muita informação útil e explica tudo de uma forma que facilita bastante o entendimento. Os materiais extras também valeram muito a pena e ajudaram a complementar ainda mais o conteúdo. Fiquei muito satisfeito com tudo que recebi. Com certeza foi uma ótima aquisição e recomendo para quem procura esse tipo de conhecimento. Obrigado pelo excelente material!"</p>
-          <div class="depoimento-estrelas" aria-label="Avaliação: 5 de 5 estrelas">
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-          </div>
-          <span class="depoimento-autor-nome">Carlos</span>
+      <div class="depoimentos-tabs-wrapper">
+        <!-- Abinhas de Navegação -->
+        <div class="depoimentos-tabs-nav" role="tablist" aria-label="Depoimentos">
+          <button type="button" class="depoimento-tab-btn ativo" role="tab" aria-selected="true" data-tab="dep-carlos">Carlos</button>
+          <button type="button" class="depoimento-tab-btn" role="tab" aria-selected="false" data-tab="dep-antonio">Antônio Silva</button>
+          <button type="button" class="depoimento-tab-btn" role="tab" aria-selected="false" data-tab="dep-valdir">Valdir</button>
+          <button type="button" class="depoimento-tab-btn" role="tab" aria-selected="false" data-tab="dep-valdemar">Valdemar</button>
+          <button type="button" class="depoimento-tab-btn" role="tab" aria-selected="false" data-tab="dep-remo">Remo</button>
         </div>
 
-        <!-- Depoimento 2: Antônio Silva -->
-        <div class="card-depoimento">
-          <div class="depoimento-avatar-icone" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-            </svg>
+        <!-- Conteúdo das Abas -->
+        <div class="depoimento-tab-card">
+          <!-- Carlos -->
+          <div class="depoimento-tab-painel ativo" id="dep-carlos" role="tabpanel">
+            <p class="depoimento-texto-limpo">"Gostei muito da compra! O guia é extremamente completo, tem muita informação útil e explica tudo de uma forma que facilita bastante o entendimento. Os materiais extras também valeram muito a pena e ajudaram a complementar ainda mais o conteúdo. Fiquei muito satisfeito com tudo que recebi. Com certeza foi uma ótima aquisição e recomendo para quem procura esse tipo de conhecimento. Obrigado pelo excelente material!"</p>
+            <div class="depoimento-autor-linha">— Carlos</div>
           </div>
-          <p class="depoimento-texto">"Sinceramente, fiquei surpreso com a quantidade de informações que vêm no guia. É muito mais completo do que eu esperava! O PDF tem bastante conteúdo, com instruções que realmente ajudam, e os extras que comprei também foram muito úteis. Fiquei bastante satisfeito com a compra e com certeza valeu cada centavo. Obrigado por disponibilizar um material tão bom!"</p>
-          <div class="depoimento-estrelas" aria-label="Avaliação: 5 de 5 estrelas">
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-          </div>
-          <span class="depoimento-autor-nome">Antônio Silva</span>
-        </div>
 
-        <!-- Depoimento 3: Valdir -->
-        <div class="card-depoimento">
-          <div class="depoimento-avatar-icone" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-            </svg>
+          <!-- Antônio Silva -->
+          <div class="depoimento-tab-painel" id="dep-antonio" role="tabpanel" hidden>
+            <p class="depoimento-texto-limpo">"Sinceramente, fiquei surpreso com a quantidade de informações que vêm no guia. É muito mais completo do que eu esperava! O PDF tem bastante conteúdo, com instruções que realmente ajudam, e os extras que comprei também foram muito úteis. Fiquei bastante satisfeito com a compra e com certeza valeu cada centavo. Obrigado por disponibilizar um material tão bom!"</p>
+            <div class="depoimento-autor-linha">— Antônio Silva</div>
           </div>
-          <p class="depoimento-texto">"Podem comprar sem receio! O material é muito completo e entrega exatamente o que promete. O guia em PDF possui instruções muito bem detalhadas e informações que fazem bastante diferença para quem trabalha ou tem interesse na área de barcos de pesca. Os materiais extras também agregaram muito. Fiquei muito satisfeito com a aquisição e certamente recomendo. Parabéns pelo excelente conteúdo!"</p>
-          <div class="depoimento-estrelas" aria-label="Avaliação: 5 de 5 estrelas">
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-          </div>
-          <span class="depoimento-autor-nome">Valdir</span>
-        </div>
 
-        <!-- Depoimento 4: Valdemar -->
-        <div class="card-depoimento">
-          <div class="depoimento-avatar-icone" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-            </svg>
+          <!-- Valdir -->
+          <div class="depoimento-tab-painel" id="dep-valdir" role="tabpanel" hidden>
+            <p class="depoimento-texto-limpo">"Podem comprar sem receio! O material é muito completo e entrega exatamente o que promete. O guia em PDF possui instruções muito bem detalhadas e informações que fazem bastante diferença para quem trabalha ou tem interesse na área de barcos de pesca. Os materiais extras também agregaram muito. Fiquei muito satisfeito com a aquisição e certamente recomendo. Parabéns pelo excelente conteúdo!"</p>
+            <div class="depoimento-autor-linha">— Valdir</div>
           </div>
-          <p class="depoimento-texto">"Excelente compra! O guia veio com muito mais informações do que eu imaginava, tudo muito bem explicado e com bastante conteúdo útil. Os extras também me ajudaram bastante e complementaram muito bem o material. Fiquei realmente satisfeito e agradeço por disponibilizar um conteúdo tão completo. Recomendo!"</p>
-          <div class="depoimento-estrelas" aria-label="Avaliação: 5 de 5 estrelas">
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-          </div>
-          <span class="depoimento-autor-nome">Valdemar</span>
-        </div>
 
-        <!-- Depoimento 5: Remo -->
-        <div class="card-depoimento">
-          <div class="depoimento-avatar-icone" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-            </svg>
+          <!-- Valdemar -->
+          <div class="depoimento-tab-painel" id="dep-valdemar" role="tabpanel" hidden>
+            <p class="depoimento-texto-limpo">"Excelente compra! O guia veio com muito mais informações do que eu imaginava, tudo muito bem explicado e com bastante conteúdo útil. Os extras também me ajudaram bastante e complementaram muito bem o material. Fiquei realmente satisfeito e agradeço por disponibilizar um conteúdo tão completo. Recomendo!"</p>
+            <div class="depoimento-autor-linha">— Valdemar</div>
           </div>
-          <p class="depoimento-texto">"Quero agradecer pelo material, gostei muito mesmo! O guia é muito bem elaborado, tem instruções para diversas situações e bastante informação que dificilmente encontramos reunida assim. Também gostei bastante dos materiais extras, que fizeram a compra valer ainda mais a pena. Foi uma ótima escolha e fiquei muito satisfeito com tudo. Com certeza indicaria para outras pessoas!"</p>
-          <div class="depoimento-estrelas" aria-label="Avaliação: 5 de 5 estrelas">
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
-            <svg viewBox="0 0 20 20"><polygon points="10 1 12.9 6.8 19.2 7.7 14.6 12.2 15.7 18.5 10 15.5 4.3 18.5 5.4 12.2 0.8 7.7 7.1 6.8 10 1"/></svg>
+
+          <!-- Remo -->
+          <div class="depoimento-tab-painel" id="dep-remo" role="tabpanel" hidden>
+            <p class="depoimento-texto-limpo">"Quero agradecer pelo material, gostei muito mesmo! O guia é muito bem elaborado, tem instruções para diversas situações e bastante informação que dificilmente encontramos reunida assim. Também gostei bastante dos materiais extras, que fizeram a compra valer ainda mais a pena. Foi uma ótima escolha e fiquei muito satisfeito com tudo. Com certeza indicaria para outras pessoas!"</p>
+            <div class="depoimento-autor-linha">— Remo</div>
           </div>
-          <span class="depoimento-autor-nome">Remo</span>
         </div>
       </div>
     </div>
