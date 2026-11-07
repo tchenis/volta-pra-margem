@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pronto! Seu kit está a caminho | Volta pra Margem</title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    const PIXEL_META_ID = '515619077217163';
+    if (PIXEL_META_ID && !PIXEL_META_ID.includes('[') && !PIXEL_META_ID.includes(']')) {
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', PIXEL_META_ID);
+      fbq('track', 'PageView');
+
+      /*
+       * Disparar o evento Purchase do pixel somente se a Cakto não estiver enviando a compra ao pixel:
+       *
+       * fbq('track', 'Purchase', {
+       *   value: 14.90,
+       *   currency: 'BRL',
+       *   content_name: 'Volta pra Margem - Kit de Bordo'
+       * });
+       */
+    }
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" alt=""
+         src="https://www.facebook.com/tr?id=515619077217163&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body style="background-color: var(--areia);">
+
+  <!-- Barra de topo simples náutica -->
+  <header style="background-color: var(--azul-rio); padding: 1rem 0; border-bottom: 3px solid var(--verde-agua);">
+    <div class="container" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+      <svg width="28" height="28" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <rect width="64" height="64" rx="12" fill="#1F8A7A"/>
+        <path d="M22 24C22 22 25 18 25 18C25 18 28 22 28 24C28 26 26.5 27.5 25 27.5C23.5 27.5 22 26 22 24Z" fill="#F6F1E7"/>
+        <path d="M38 17L33.5 25H37.5L35.5 32L41.5 23.5H37.5L38 17Z" fill="#F2C14E"/>
+        <path d="M47 20H51C52 20 53 21 53 22V29H46V21C46 20.5 46.5 20 47 20Z" stroke="#F57C1F" stroke-width="2" fill="none"/>
+      </svg>
+      <span style="font-family: var(--font-titulo); font-size: 1.5rem; color: var(--areia); font-weight: 700; letter-spacing: 1px;">
+        VOLTA PRA MARGEM
+      </span>
+    </div>
+  </header>
+
+  <!-- Conteúdo de Confirmação -->
+  <main class="secao-institucional">
+    <div class="container">
+      <div class="institucional-container card-obrigado">
+        <!-- Ícone Sucesso / Âncora Náutica SVG -->
+        <svg class="icone-sucesso-svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#E6F3F1" stroke="#1F8A7A" stroke-width="3"/>
+          <path d="M20 33L28 41L44 24" stroke="#1F8A7A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <h1>Pronto! Seu kit está a caminho.</h1>
+        <p style="font-size: 1.15rem; color: var(--grafite); margin-bottom: 2rem;">
+          Seu pedido foi confirmado. Siga os três passos abaixo para acessar e usar o material no seu barco:
+        </p>
+
+        <!-- Três passos exatos da instrução -->
+        <ol class="passos-obrigado">
+          <li class="passo-item-obrigado">
+            <span class="numero-passo">1</span>
+            <div class="texto-passo">
+              <strong>Confira seu e-mail</strong> (veja também o spam e a aba Promoções). O link para download de todos os arquivos foi enviado imediatamente.
+            </div>
+          </li>
+
+          <li class="passo-item-obrigado">
+            <span class="numero-passo">2</span>
+            <div class="texto-passo">
+              <strong>Primeira tarefa:</strong> imprima o Cartão de Bolso e guarde no barco hoje. Assim você garante a consulta rápida mesmo se ficar sem bateria ou sem sinal na água.
+            </div>
+          </li>
+
+          <li class="passo-item-obrigado">
+            <span class="numero-passo">3</span>
+            <div class="texto-passo">
+              <strong>Problema com o acesso?</strong> Fale com <a href="mailto:matheusmirandasantos56@gmail.com" style="color: var(--verde-agua); font-weight: 600; text-decoration: underline;">matheusmirandasantos56@gmail.com</a>. Estamos à disposição para ajudar você a voltar pra margem com segurança.
+            </div>
+          </li>
+        </ol>
+
+        <div style="margin-top: 2.5rem;">
+          <a href="index.html" class="btn-compra btn-auto" style="text-decoration: none; display: inline-flex;">
+            Voltar para a Página Principal
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé Institucional -->
+  <footer class="rodape-principal" style="padding-bottom: 3rem;">
+    <div class="container">
+      <div class="rodape-container">
+        <div class="rodape-dados">
+          Matheus Santos · CNPJ/CPF: 49715225810 · Contato: matheusmirandasantos56@gmail.com
+        </div>
+        <div class="rodape-avisos">
+          <p>Material de consulta. Siga sempre o manual do fabricante do seu motor.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

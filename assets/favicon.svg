@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Fundo náutico azul-rio com bordas arredondadas -->
+  <rect width="64" height="64" rx="14" fill="#0F2E3D"/>
+  
+  <!-- Contorno de cartão de bolso náutico -->
+  <rect x="8" y="10" width="48" height="44" rx="6" stroke="#1F8A7A" stroke-width="2.5" fill="#091d27" stroke-dasharray="2 2"/>
+  
+  <!-- Linhas d'água sutis na base -->
+  <path d="M12 44C16 43 20 45 24 44C28 43 32 45 36 44C40 43 44 45 48 44C50 43.5 52 44 52 44" stroke="#1F8A7A" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Três símbolos em linha: Gota (Água), Raio (Faísca), Bomba (Combustível) -->
+  <!-- 1. Gota de Água -->
+  <path d="M20 28C20 25.5 22 22 22 22C22 22 24 25.5 24 28C24 29.5 23 31 22 31C21 31 20 29.5 20 28Z" fill="#1F8A7A"/>
+  
+  <!-- 2. Raio / Faísca -->
+  <path d="M33 21L29.5 27.5H32.5L31 33L35.5 26.5H32.5L33 21Z" fill="#F2C14E"/>
+  
+  <!-- 3. Bomba de Combustível -->
+  <path d="M41 23H44.5C45.3 23 46 23.7 46 24.5V31H40V24C40 23.4 40.4 23 41 23Z" stroke="#F57C1F" stroke-width="1.5" fill="none"/>
+  <rect x="41.5" y="25" width="3" height="2" fill="#F57C1F"/>
+  <path d="M46 25.5H47C47.6 25.5 48 26 48 26.6V30" stroke="#F57C1F" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

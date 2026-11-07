@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none" role="img" aria-label="Mockup do material Volta pra Margem: celular com ficha de defeito e cartão de bolso para barco">
+  <defs>
+    <!-- Sombra suave para os materiais -->
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+
+    <filter id="phoneShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+
+    <linearGradient id="phoneBody" x1="0" y1="0" x2="220" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2D3748"/>
+      <stop offset="100%" stop-color="#1A202C"/>
+    </linearGradient>
+
+    <linearGradient id="cardBg" x1="0" y1="0" x2="280" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBF8F3"/>
+      <stop offset="100%" stop-color="#EFE8D8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo sutil integrado às seções escuras -->
+  <rect width="640" height="420" fill="none"/>
+
+  <!-- ============================================== -->
+  <!-- 1. CARTÃO DE BOLSO (Versão para imprimir / plastificar) -->
+  <!-- ============================================== -->
+  <g transform="translate(310, 40) rotate(5)" filter="url(#cardShadow)">
+    <!-- Base do cartão plastificado (borda plástica transparente laminada) -->
+    <rect x="-8" y="-8" width="296" height="346" rx="18" fill="#FFFFFF" fill-opacity="0.25" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4"/>
+
+    <!-- Cartão rígido areia náutico -->
+    <rect width="280" height="330" rx="12" fill="url(#cardBg)" stroke="#D8CEBA" stroke-width="2"/>
+
+    <!-- Faixa superior do Cartão -->
+    <rect width="280" height="52" rx="12" fill="#0F2E3D"/>
+    <rect y="40" width="280" height="12" fill="#0F2E3D"/>
+    
+    <text x="140" y="24" fill="#F6F1E7" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="14" letter-spacing="1.5" text-anchor="middle">VOLTA PRA MARGEM</text>
+    <text x="140" y="42" fill="#1F8A7A" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="12" letter-spacing="2" text-anchor="middle">TESTE DOS 3 SINAIS · CARTÃO DE BORDO</text>
+
+    <!-- Furo para cordão de barco no topo direito -->
+    <circle cx="258" cy="24" r="5" fill="#EFE8D8" stroke="#0F2E3D" stroke-width="2"/>
+    <circle cx="258" cy="24" r="3" fill="#D8CEBA"/>
+
+    <!-- Passo Zero em destaque -->
+    <rect x="14" y="62" width="252" height="36" rx="6" fill="#E8DEC9" stroke="#CBBFA7" stroke-width="1"/>
+    <text x="24" y="77" fill="#0F2E3D" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="12">PASSO ZERO (ANTES DE PUXAR):</text>
+    <text x="24" y="90" fill="#1E1E1E" font-family="'Inter', sans-serif" font-weight="500" font-size="9.5">1. Cordão encaixado · 2. Registro aberto · 3. Afogador</text>
+
+    <!-- 3 Blocos de Sinais -->
+    <!-- Sinal 1: Água -->
+    <g transform="translate(14, 108)">
+      <rect width="252" height="48" rx="6" fill="#FFFFFF" stroke="#E2D9C5" stroke-width="1"/>
+      <!-- Ícone Água -->
+      <circle cx="22" cy="24" r="14" fill="#0F2E3D"/>
+      <path d="M22 17 C 22 17, 18 22, 18 24 C 18 26.2, 19.8 28, 22 28 C 24.2 28, 26 26.2, 26 24 C 26 22, 22 17, 22 17 Z" fill="#1F8A7A"/>
+      <text x="44" y="22" fill="#0F2E3D" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="13">1. ÁGUA</text>
+      <text x="44" y="36" fill="#4A5568" font-family="'Inter', sans-serif" font-size="10">Jato indicador sai forte com motor ligado?</text>
+    </g>
+
+    <!-- Sinal 2: Faísca -->
+    <g transform="translate(14, 164)">
+      <rect width="252" height="48" rx="6" fill="#FFFFFF" stroke="#E2D9C5" stroke-width="1"/>
+      <!-- Ícone Faísca -->
+      <circle cx="22" cy="24" r="14" fill="#0F2E3D"/>
+      <path d="M23 16 L 19 23 H 23 L 21 29 L 27 22 H 23 L 23 16 Z" fill="#F2C14E"/>
+      <text x="44" y="22" fill="#0F2E3D" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="13">2. FAÍSCA</text>
+      <text x="44" y="36" fill="#4A5568" font-family="'Inter', sans-serif" font-size="10">Vela está faiscando e seca?</text>
+    </g>
+
+    <!-- Sinal 3: Combustível -->
+    <g transform="translate(14, 220)">
+      <rect width="252" height="48" rx="6" fill="#FFFFFF" stroke="#E2D9C5" stroke-width="1"/>
+      <!-- Ícone Bomba -->
+      <circle cx="22" cy="24" r="14" fill="#0F2E3D"/>
+      <path d="M19 19 H 23 C 23.6 19 24 19.4 24 20 V 26 H 19 V 20 C 19 19.4 19.4 19 19 19 Z" stroke="#F57C1F" stroke-width="1.4" fill="none"/>
+      <line x1="24" y1="21" x2="25.5" y2="21" stroke="#F57C1F" stroke-width="1.2"/>
+      <line x1="25.5" y1="21" x2="25.5" y2="25" stroke="#F57C1F" stroke-width="1.2"/>
+      <text x="44" y="22" fill="#0F2E3D" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="13">3. COMBUSTÍVEL</text>
+      <text x="44" y="36" fill="#4A5568" font-family="'Inter', sans-serif" font-size="10">Pera fica firme? Gasolina está limpa?</text>
+    </g>
+
+    <!-- Rodapé do cartão: Semáforo -->
+    <g transform="translate(14, 276)">
+      <rect width="252" height="42" rx="6" fill="#0F2E3D"/>
+      <circle cx="26" cy="21" r="5" fill="#1F8A7A"/>
+      <text x="36" y="24" fill="#F6F1E7" font-family="'Inter', sans-serif" font-weight="600" font-size="9">Resolve</text>
+      
+      <circle cx="98" cy="21" r="5" fill="#F2C14E"/>
+      <text x="108" y="24" fill="#F6F1E7" font-family="'Inter', sans-serif" font-weight="600" font-size="9">Peça/Ferramenta</text>
+
+      <circle cx="198" cy="21" r="5" fill="#D64545"/>
+      <text x="208" y="24" fill="#F6F1E7" font-family="'Inter', sans-serif" font-weight="600" font-size="9">Mecânico</text>
+    </g>
+  </g>
+
+  <!-- ============================================== -->
+  <!-- 2. CELULAR (Versão digital que funciona sem internet) -->
+  <!-- ============================================== -->
+  <g transform="translate(60, 20) rotate(-3)" filter="url(#phoneShadow)">
+    <!-- Corpo externo do smartphone -->
+    <rect width="220" height="375" rx="36" fill="url(#phoneBody)" stroke="#4A5568" stroke-width="3"/>
+    
+    <!-- Tela interna do celular -->
+    <rect x="9" y="10" width="202" height="355" rx="28" fill="#F6F1E7"/>
+
+    <!-- Notch / Câmera frontal -->
+    <rect x="75" y="14" width="70" height="15" rx="7.5" fill="#1A202C"/>
+    <circle cx="125" cy="21" r="3" fill="#2D3748"/>
+
+    <!-- Conteúdo da tela do aplicativo / guia digital -->
+    <!-- Top bar do app -->
+    <rect x="9" y="34" width="202" height="42" fill="#0F2E3D"/>
+    <text x="22" y="52" fill="#F6F1E7" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="11" letter-spacing="1">ROTA #03 · MOTOR</text>
+    <text x="22" y="67" fill="#1F8A7A" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="14">MOTOR AFOGADO</text>
+    <rect x="156" y="44" width="45" height="18" rx="4" fill="#1F8A7A"/>
+    <text x="178" y="56" fill="#F6F1E7" font-family="'Inter', sans-serif" font-weight="700" font-size="8.5" text-anchor="middle">OFFLINE</text>
+
+    <!-- Ficha com semáforo -->
+    <!-- Passo 1: Você resolve (Verde) -->
+    <g transform="translate(19, 88)">
+      <rect width="182" height="64" rx="8" fill="#FFFFFF" stroke="#E2D9C5" stroke-width="1"/>
+      <rect x="8" y="10" width="8" height="8" rx="4" fill="#1F8A7A"/>
+      <text x="22" y="18" fill="#1F8A7A" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="11">PASSO 1 · VOCÊ RESOLVE</text>
+      <text x="8" y="36" fill="#1E1E1E" font-family="'Inter', sans-serif" font-weight="600" font-size="10">Feche o afogador e abra 100% o acelerador.</text>
+      <text x="8" y="51" fill="#718096" font-family="'Inter', sans-serif" font-size="9">Puxe a corda 5 a 8 vezes firmes.</text>
+    </g>
+
+    <!-- Passo 2: Precisa de chave de vela (Amarelo) -->
+    <g transform="translate(19, 160)">
+      <rect width="182" height="66" rx="8" fill="#FFFFFF" stroke="#E2D9C5" stroke-width="1"/>
+      <rect x="8" y="10" width="8" height="8" rx="4" fill="#F2C14E"/>
+      <text x="22" y="18" fill="#B7791F" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="11">PASSO 2 · CHAVE DE VELA</text>
+      <text x="8" y="36" fill="#1E1E1E" font-family="'Inter', sans-serif" font-weight="600" font-size="10">Retire a vela e verifique se está molhada.</text>
+      <text x="8" y="51" fill="#718096" font-family="'Inter', sans-serif" font-size="9">Seque a ponta e puxe a corda sem vela.</text>
+    </g>
+
+    <!-- Passo 3: Se persistir (Vermelho) -->
+    <g transform="translate(19, 234)">
+      <rect width="182" height="66" rx="8" fill="#FFFFFF" stroke="#E2D9C5" stroke-width="1"/>
+      <rect x="8" y="10" width="8" height="8" rx="4" fill="#D64545"/>
+      <text x="22" y="18" fill="#C53030" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="11">PASSO 3 · REBOQUE / OFICINA</text>
+      <text x="8" y="36" fill="#1E1E1E" font-family="'Inter', sans-serif" font-weight="600" font-size="10">Agulha do carburador travada aberta.</text>
+      <text x="8" y="51" fill="#718096" font-family="'Inter', sans-serif" font-size="9">Não insista no rio. Hora de rebocar.</text>
+    </g>
+
+    <!-- Barra de navegação inferior do celular -->
+    <rect x="9" y="325" width="202" height="40" fill="#0F2E3D"/>
+    <text x="110" y="347" fill="#F6F1E7" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="11" text-anchor="middle">25 ROTAS · 15 PASSO A PASSOS</text>
+    <rect x="80" y="357" width="60" height="3" rx="1.5" fill="#A0AEC0"/>
+  </g>
+</svg>

@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none" role="img" aria-label="Ilustração de um barco de alumínio com motor de popa numa represa ao entardecer">
+  <defs>
+    <!-- Gradiente do céu ao entardecer na represa -->
+    <linearGradient id="skyGrad" x1="300" y1="0" x2="300" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#071821"/>
+      <stop offset="45%" stop-color="#0F2E3D"/>
+      <stop offset="80%" stop-color="#1B4D5C"/>
+      <stop offset="100%" stop-color="#A85B28" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <!-- Gradiente da água da represa -->
+    <linearGradient id="waterGrad" x1="300" y1="210" x2="300" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#133849"/>
+      <stop offset="50%" stop-color="#0D2531"/>
+      <stop offset="100%" stop-color="#07161F"/>
+    </linearGradient>
+
+    <!-- Brilho do sol poente / entardecer -->
+    <radialGradient id="sunGlow" cx="420" cy="180" r="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F2C14E" stop-opacity="0.7"/>
+      <stop offset="40%" stop-color="#F57C1F" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0F2E3D" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Textura de alumínio do barco -->
+    <linearGradient id="hullGrad" x1="120" y1="230" x2="420" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9EABB2"/>
+      <stop offset="35%" stop-color="#BCC7CC"/>
+      <stop offset="70%" stop-color="#808F96"/>
+      <stop offset="100%" stop-color="#64737B"/>
+    </linearGradient>
+
+    <!-- Capô do motor de popa -->
+    <linearGradient id="motorGrad" x1="100" y1="180" x2="160" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2D3748"/>
+      <stop offset="50%" stop-color="#1A202C"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Céu ao entardecer -->
+  <rect width="600" height="210" fill="url(#skyGrad)"/>
+
+  <!-- Brilho do pôr do sol no horizonte -->
+  <circle cx="420" cy="185" r="130" fill="url(#sunGlow)"/>
+
+  <!-- Margem distante / vegetação da represa ao fundo -->
+  <path d="M0 195 Q 60 188, 120 192 T 240 189 T 360 193 T 480 188 T 600 191 L 600 212 L 0 212 Z" fill="#0A1D27" opacity="0.85"/>
+  <!-- Silhuetas de árvores e mata ciliar -->
+  <path d="M40 194 Q 48 180, 56 194 M 85 193 Q 95 174, 105 193 M 280 192 Q 292 176, 304 192 M 340 193 Q 350 178, 360 193 M 440 190 Q 452 170, 464 190 M 475 189 Q 485 175, 495 189 M 540 192 Q 550 177, 560 192" stroke="#081720" stroke-width="2.5" fill="#081720"/>
+
+  <!-- Superfície da água da represa -->
+  <rect y="210" width="600" height="150" fill="url(#waterGrad)"/>
+
+  <!-- Reflexos dourados no espelho d'água -->
+  <ellipse cx="420" cy="218" rx="80" ry="2.5" fill="#F2C14E" opacity="0.4"/>
+  <ellipse cx="410" cy="226" rx="55" ry="2" fill="#F57C1F" opacity="0.3"/>
+  <ellipse cx="430" cy="235" rx="35" ry="1.5" fill="#F2C14E" opacity="0.25"/>
+
+  <!-- Linhas d'água estilizadas -->
+  <path d="M30 225 C 80 223, 140 226, 200 224" stroke="#1F8A7A" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <path d="M420 248 C 470 246, 520 249, 570 247" stroke="#1F8A7A" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <path d="M70 270 C 130 268, 190 272, 250 269" stroke="#1F8A7A" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+  <path d="M380 295 C 440 293, 500 296, 560 294" stroke="#1F8A7A" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+  <path d="M120 325 C 200 322, 320 326, 440 323" stroke="#1F8A7A" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+
+  <!-- BARCO DE ALUMÍNIO E MOTOR DE POPA -->
+  <g transform="translate(10, 0)">
+    <!-- Linha de esteira suave na água sob o barco -->
+    <ellipse cx="280" cy="285" rx="190" ry="6" fill="#061219" opacity="0.6"/>
+
+    <!-- Casco do barco de alumínio (vista lateral inclinada 3/4) -->
+    <!-- Fundo / lateral do bico -->
+    <path d="M140 246 L 410 236 Q 445 237, 470 243 L 420 274 Q 280 282, 140 268 Z" fill="url(#hullGrad)" stroke="#3E4C52" stroke-width="2"/>
+    
+    <!-- Borda superior reforçada (verdugo de alumínio) -->
+    <path d="M138 245 C 220 241, 320 237, 412 235 C 438 236, 458 239, 472 243" stroke="#D1DCE0" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- Frisos característicos da chapa de alumínio naval do costado -->
+    <path d="M145 254 Q 280 258, 435 250" stroke="#728087" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
+    <path d="M150 261 Q 280 268, 418 260" stroke="#505F66" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- Interior visível da popa e bancada -->
+    <path d="M142 246 L 195 244 L 195 256 L 142 258 Z" fill="#4B565C"/>
+    <path d="M260 242 L 310 241 L 310 252 L 260 253 Z" fill="#4B565C"/>
+
+    <!-- Duas varas de pesca apoiadas na borda apontando para o céu -->
+    <line x1="285" y1="242" x2="365" y2="150" stroke="#D1DCE0" stroke-width="2" stroke-linecap="round"/>
+    <line x1="285" y1="242" x2="365" y2="150" stroke="#F57C1F" stroke-width="0.8" stroke-dasharray="8 6"/>
+    <line x1="265" y1="243" x2="325" y2="135" stroke="#A8B5BA" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- MOTOR DE POPA NO ESPELHO DE POPA -->
+    <g id="motor-de-popa">
+      <!-- Suporte de fixação ao espelho de popa (bracket) -->
+      <rect x="134" y="240" width="12" height="24" rx="2" fill="#20272E" stroke="#11161B" stroke-width="1.5"/>
+
+      <!-- Capô / Cabeçote do motor de popa -->
+      <path d="M102 214 C 102 201, 114 192, 130 192 C 145 192, 154 200, 152 216 L 148 238 C 148 241, 144 244, 138 244 L 112 244 C 106 244, 102 240, 102 236 Z" fill="url(#motorGrad)" stroke="#11171D" stroke-width="2"/>
+      
+      <!-- Faixa náutica no capô do motor -->
+      <path d="M103 218 C 115 217, 135 217, 151 222" stroke="#1F8A7A" stroke-width="3" stroke-linecap="round"/>
+      <path d="M104 223 C 116 222, 132 222, 149 226" stroke="#F57C1F" stroke-width="1.5" stroke-linecap="round"/>
+
+      <!-- Manete / cana do leme do motor de popa estendendo-se para dentro do barco -->
+      <path d="M140 232 L 180 236" stroke="#1A202C" stroke-width="4.5" stroke-linecap="round"/>
+      <rect x="174" y="233" width="14" height="6" rx="2" fill="#E2E8F0"/>
+      <!-- Cordão de emergência vermelho preso ao manete -->
+      <path d="M168 238 C 168 248, 172 250, 170 256" stroke="#D64545" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+      <!-- Rabeta / Haste descendo para a água -->
+      <path d="M125 244 L 123 286 L 132 286 L 135 244 Z" fill="#2D3748" stroke="#1A202C" stroke-width="1.5"/>
+
+      <!-- Placa de cavitação e quilha submersa -->
+      <path d="M116 284 L 138 284 L 136 290 L 118 290 Z" fill="#1A202C"/>
+      <path d="M124 286 L 128 304 L 132 304 L 131 286 Z" fill="#1A202C"/>
+
+      <!-- Hélice submersa (silhueta) -->
+      <ellipse cx="120" cy="292" rx="3" ry="8" fill="#4A5568" transform="rotate(-20 120 292)"/>
+
+      <!-- Jato indicador d'água (xixi do motor) saindo da rabeta em direção ao rio -->
+      <path d="M136 248 Q 146 250, 150 262" stroke="#48CAE4" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 2" fill="none" opacity="0.85"/>
+      <circle cx="150" cy="263" r="1.5" fill="#48CAE4" opacity="0.8"/>
+    </g>
+
+    <!-- Pescador no banco da popa (silhueta tranquila cuidando da navegação) -->
+    <g id="silhueta-pescador" opacity="0.88">
+      <!-- Chapéu de palha de pescador -->
+      <path d="M210 205 C 210 205, 222 195, 235 205" stroke="#D8C39E" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="223" cy="204" rx="14" ry="3" fill="#D8C39E"/>
+      <path d="M217 203 C 217 197, 229 197, 229 203 Z" fill="#B39E78"/>
+      <!-- Cabeça e corpo com colete salva-vidas laranja de segurança -->
+      <circle cx="223" cy="210" r="5" fill="#1A202C"/>
+      <!-- Colete laranja -->
+      <path d="M213 216 C 213 214, 233 214, 233 216 L 235 242 L 211 242 Z" fill="#F57C1F"/>
+      <!-- Braço segurando o manete -->
+      <path d="M215 224 L 186 235" stroke="#1A202C" stroke-width="3.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Distintivo flutuante sutil do Teste dos 3 Sinais no canto superior -->
+  <g transform="translate(420, 24)" filter="drop-shadow(0 4px 12px rgba(0,0,0,0.4))">
+    <rect width="156" height="52" rx="10" fill="#091d27" stroke="#1F8A7A" stroke-width="1.5" fill-opacity="0.95"/>
+    <text x="78" y="18" fill="#F6F1E7" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="11" letter-spacing="1" text-anchor="middle">KIT DE BORDO</text>
+    
+    <!-- Ícone 1: Água -->
+    <g transform="translate(24, 25)">
+      <circle cx="10" cy="10" r="9" fill="#0F2E3D" stroke="#1F8A7A" stroke-width="1"/>
+      <path d="M10 6 C 10 6, 6.5 10.5, 6.5 12 C 6.5 13.9, 8 15, 10 15 C 12 15, 13.5 13.9, 13.5 12 C 13.5 10.5, 10 6, 10 6 Z" fill="#1F8A7A"/>
+    </g>
+    <!-- Ícone 2: Faísca -->
+    <g transform="translate(68, 25)">
+      <circle cx="10" cy="10" r="9" fill="#0F2E3D" stroke="#F2C14E" stroke-width="1"/>
+      <path d="M11 5 L 8 10 H 11 L 9.5 15 L 13.5 9.5 H 10.5 L 11 5 Z" fill="#F2C14E"/>
+    </g>
+    <!-- Ícone 3: Combustível -->
+    <g transform="translate(112, 25)">
+      <circle cx="10" cy="10" r="9" fill="#0F2E3D" stroke="#F57C1F" stroke-width="1"/>
+      <path d="M8 8 H 11 C 11.5 8 12 8.5 12 9 V 13 H 8 V 9 C 8 8.5 8.5 8 8 8 Z" stroke="#F57C1F" stroke-width="1.2" fill="none"/>
+      <line x1="12" y1="9.5" x2="13.5" y2="9.5" stroke="#F57C1F" stroke-width="1"/>
+      <line x1="13.5" y1="9.5" x2="13.5" y2="12.5" stroke="#F57C1F" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
