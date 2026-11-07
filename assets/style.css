@@ -1031,7 +1031,7 @@ h1, h2, h3, h4, .tipo-placa {
 }
 
 /* ==========================================================================
-   10. SEÇÃO OFERTA (id="oferta", Fundo Azul-Rio, Card Central Areia com Borda Laranja)
+   10. SEÇÃO OFERTA (id="oferta", Fundo Azul-Rio, 2 Kits lado a lado)
    ========================================================================== */
 .secao-oferta {
   background-color: var(--azul-rio);
@@ -1040,96 +1040,389 @@ h1, h2, h3, h4, .tipo-placa {
 }
 
 .oferta-container {
-  max-width: 620px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
-.card-oferta-central {
-  background-color: var(--areia);
-  border: 3px solid var(--laranja-colete); /* Borda laranja obrigatória */
-  border-radius: var(--raio-borda);
-  padding: 2.5rem 1.75rem;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+.oferta-cabecalho {
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 
-@media (min-width: 640px) {
-  .card-oferta-central {
-    padding: 3rem 2.5rem;
+.oferta-cabecalho .titulo-secao {
+  color: var(--areia);
+  margin-bottom: 0.5rem;
+}
+
+.oferta-cabecalho .subtitulo-oferta {
+  color: #D6E2E6;
+  font-size: 1.15rem;
+}
+
+.grid-dois-kits {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-dois-kits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
   }
 }
 
-.card-oferta-titulo {
+/* Card Comum a ambos os kits */
+.card-kit {
+  background-color: var(--areia);
+  border-radius: var(--raio-borda);
+  padding: 2.25rem 1.75rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .card-kit {
+    padding: 2.75rem 2rem;
+  }
+}
+
+/* Card Kit Básico */
+.card-kit-basico {
+  border: 2px solid var(--areia-escuro);
+}
+
+/* Card Kit Premium (Destaque) */
+.card-kit-premium {
+  border: 3px solid var(--laranja-colete);
+  background-color: #FAF7F0;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .card-kit-premium {
+    transform: translateY(-8px);
+  }
+}
+
+.badge-kit-premium {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--laranja-colete);
+  color: var(--azul-rio);
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.35rem 1.25rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(245, 124, 31, 0.4);
+  white-space: nowrap;
+}
+
+.card-kit-topo {
+  margin-bottom: 1.5rem;
+}
+
+.card-kit-titulo {
   font-family: var(--font-titulo);
   font-weight: 700;
   font-size: 1.85rem;
   color: var(--azul-rio);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-bottom: 1.75rem;
-  line-height: 1.2;
-}
-
-.lista-itens-oferta {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  text-align: left;
-  max-width: 440px;
-  margin: 0 auto 2rem auto;
-}
-
-.item-oferta {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--azul-rio);
-}
-
-.item-oferta svg {
-  width: 20px;
-  height: 20px;
-  color: var(--verde-agua);
-  flex-shrink: 0;
-}
-
-.bloco-preco {
-  margin-bottom: 1.5rem;
-}
-
-/* Preço grande em laranja obrigatório */
-.preco-destaque-laranja {
-  font-family: var(--font-titulo);
-  font-weight: 700;
-  font-size: 3.75rem;
-  color: var(--laranja-colete);
-  line-height: 1;
-  letter-spacing: -0.5px;
   margin-bottom: 0.5rem;
+  line-height: 1.15;
 }
 
-@media (min-width: 640px) {
-  .preco-destaque-laranja {
-    font-size: 4.5rem;
-  }
-}
-
-.detalhes-pagamento {
-  font-size: 1rem;
+.card-kit-subtitulo {
+  font-size: 0.95rem;
   color: var(--grafite-claro);
   font-weight: 500;
 }
 
-.card-oferta-central .btn-compra {
-  margin-bottom: 1rem;
+.lista-itens-kit-oferta {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  text-align: left;
+  margin: 0 auto 2rem auto;
+  width: 100%;
 }
 
-.aviso-entrega-imediata {
+.item-kit-oferta {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: var(--grafite);
+}
+
+.item-kit-oferta.item-bonus {
+  background-color: rgba(31, 138, 122, 0.1);
+  padding: 0.5rem 0.65rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--verde-agua);
+}
+
+.item-kit-oferta svg {
+  width: 18px;
+  height: 18px;
+  color: var(--verde-agua);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.item-kit-oferta.item-indisponivel {
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.item-kit-oferta.item-indisponivel svg {
+  color: #B0B0B0;
+}
+
+.bloco-preco-kit {
+  margin-bottom: 1.25rem;
+}
+
+.preco-destaque-kit {
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  font-size: 3.25rem;
+  color: var(--laranja-colete);
+  line-height: 1;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.35rem;
+}
+
+@media (min-width: 640px) {
+  .preco-destaque-kit {
+    font-size: 3.75rem;
+  }
+}
+
+.detalhes-pagamento-kit {
   font-size: 0.95rem;
   color: var(--grafite-claro);
+  font-weight: 500;
+}
+
+.card-kit .btn-compra {
+  margin-bottom: 0.85rem;
+}
+
+/* ==========================================================================
+   POP-UP MODAL DE DESCONTO EXCLUSIVO (KIT PREMIUM POR R$ 17,90)
+   ========================================================================== */
+.modal-desconto-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(9, 29, 39, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.modal-desconto-overlay.visivel {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-desconto-container {
+  background-color: var(--areia);
+  border: 3px solid var(--laranja-colete);
+  border-radius: 16px;
+  max-width: 560px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 2.25rem 1.75rem 1.75rem 1.75rem;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  animation: zoomInModal 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes zoomInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.btn-fechar-modal {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--grafite-claro);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: color var(--transicao-rapida);
+}
+
+.btn-fechar-modal:hover {
+  color: var(--vermelho-semaforo);
+}
+
+.modal-badge-urgencia {
+  display: inline-block;
+  background-color: var(--laranja-colete);
+  color: var(--azul-rio);
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(245, 124, 31, 0.3);
+}
+
+.modal-titulo {
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  font-size: 1.85rem;
+  color: var(--azul-rio);
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .modal-titulo {
+    font-size: 2.15rem;
+  }
+}
+
+.modal-subtitulo {
+  font-size: 1.05rem;
+  color: var(--grafite);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.modal-caixa-vantagens {
+  background-color: var(--areia-card);
+  border: 1.5px solid var(--areia-escuro);
+  border-radius: var(--raio-borda);
+  padding: 1.35rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.modal-destaque-preco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(31, 138, 122, 0.12);
+  border: 1.5px dashed var(--verde-agua);
+  border-radius: 10px;
+  padding: 0.85rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.preco-antigo {
+  font-size: 1.1rem;
+  color: var(--grafite-claro);
+  text-decoration: line-through;
+  font-weight: 600;
+}
+
+.preco-novo {
+  font-family: var(--font-titulo);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--laranja-colete);
+  line-height: 1;
+  margin: 0.2rem 0;
+}
+
+.preco-diferenca {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--verde-agua);
+}
+
+.modal-lista-bonus {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.modal-lista-bonus li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  color: var(--grafite);
+}
+
+.modal-lista-bonus li svg {
+  width: 17px;
+  height: 17px;
+  color: var(--verde-agua);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.btn-modal-aceitar {
+  width: 100%;
+  font-size: 1.3rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 8px 24px rgba(245, 124, 31, 0.4);
+}
+
+.link-continuar-basico {
+  display: inline-block;
+  font-size: 0.95rem;
+  color: var(--grafite-claro);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color var(--transicao-rapida);
+}
+
+.link-continuar-basico:hover {
+  color: var(--azul-rio);
 }
 
 /* ==========================================================================

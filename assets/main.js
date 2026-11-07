@@ -7,67 +7,120 @@
 // CONFIGURAÇÕES GLOBAIS
 // ==========================================================================
 const CONFIG = {
-  // Link oficial de checkout da Cakto
-  linkCheckout: "https://pay.cakto.com.br/3dviaos_1294380",
+  // Links oficiais de checkout da Cakto
+  linkCheckoutNormal: "https://pay.cakto.com.br/3dviaos_1294380",   // Kit Básico (R$ 14,90)
+  linkCheckoutPremium: "https://pay.cakto.com.br/8rwyskx_1294634",  // Kit Premium (R$ 25,90)
+  linkCheckoutDesconto: "https://pay.cakto.com.br/t5dxvf4_1294639", // Kit Premium com Desconto (R$ 17,90)
   pixelMetaId: "515619077217163"
 };
 
 // ==========================================================================
 // 1. GERENCIAMENTO DE LINKS DE CHECKOUT E PARÂMETROS UTM
 // ==========================================================================
+function montarUrlComUtms(urlBase) {
+  if (!urlBase) return '';
+  try {
+    const urlDestino = new URL(urlBase, window.location.origin);
+    const paramsAtuais = new URLSearchParams(window.location.search);
+    
+    // Anexa todos os parâmetros da URL atual (utm_source, utm_medium, utm_campaign, utm_content, utm_term, fbclid, src, sck, etc.)
+    paramsAtuais.forEach((valor, chave) => {
+      urlDestino.searchParams.set(chave, valor);
+    });
+
+    return urlDestino.toString();
+  } catch (err) {
+    const separador = urlBase.includes('?') ? '&' : '?';
+    const searchString = window.location.search.replace(/^\?/, '');
+    return searchString ? `${urlBase}${separador}${searchString}` : urlBase;
+  }
+}
+
 function inicializarLinksCheckout() {
-  const paramsAtuais = new URLSearchParams(window.location.search);
   const botoesCheckout = document.querySelectorAll('.btn-checkout');
 
   botoesCheckout.forEach(botao => {
-    // Permite configurar via CONFIG.linkCheckout ou via atributo data-checkout
-    const baseCheckout = botao.getAttribute('data-checkout') || CONFIG.linkCheckout;
-    const isPlaceholder = !baseCheckout || baseCheckout.includes('[') || baseCheckout.includes(']');
-
-    if (isPlaceholder) {
-      botao.setAttribute('href', '#oferta');
-      botao.addEventListener('click', (e) => {
-        // Dispara o evento InitiateCheckout do Meta Pixel
-        dispararEventoPixel('InitiateCheckout', {
-          content_name: 'Volta pra Margem - Kit de Bordo',
-          value: 14.90,
-          currency: 'BRL'
-        });
-
-        console.info('[Volta pra Margem] O link de checkout ainda está como marcador:', baseCheckout);
-      });
-      return;
-    }
-
-    try {
-      // Constrói URL mesclando parâmetros existentes da URL base com os da página atual
-      const urlDestino = new URL(baseCheckout, window.location.origin);
-      
-      // Anexa todos os parâmetros da URL atual (utm_source, utm_medium, utm_campaign, utm_content, utm_term, fbclid, src, sck, etc.)
-      paramsAtuais.forEach((valor, chave) => {
-        urlDestino.searchParams.set(chave, valor);
-      });
-
-      botao.setAttribute('href', urlDestino.toString());
-    } catch (err) {
-      // Fallback para URLs relativas ou formatos especiais
-      const separador = baseCheckout.includes('?') ? '&' : '?';
-      const searchString = window.location.search.replace(/^\?/, '');
-      if (searchString) {
-        botao.setAttribute('href', `${baseCheckout}${separador}${searchString}`);
-      } else {
-        botao.setAttribute('href', baseCheckout);
-      }
-    }
+    const baseCheckout = botao.getAttribute('data-checkout') || CONFIG.linkCheckoutNormal;
+    const urlCompleta = montarUrlComUtms(baseCheckout);
+    botao.setAttribute('href', urlCompleta);
 
     // Listener para o evento InitiateCheckout do Meta Pixel
     botao.addEventListener('click', () => {
+      let valorProduto = 14.90;
+      let nomeProduto = 'Volta pra Margem - Kit Básico';
+
+      if (baseCheckout.includes('8rwyskx_1294634')) {
+        valorProduto = 25.90;
+        nomeProduto = 'Volta pra Margem - Kit Premium';
+      } else if (baseCheckout.includes('t5dxvf4_1294639')) {
+        valorProduto = 17.90;
+        nomeProduto = 'Volta pra Margem - Kit Premium com Desconto';
+      }
+
       dispararEventoPixel('InitiateCheckout', {
-        content_name: 'Volta pra Margem - Kit de Bordo',
-        value: 14.90,
+        content_name: nomeProduto,
+        value: valorProduto,
         currency: 'BRL'
       });
     });
+  });
+}
+
+// ==========================================================================
+// POP-UP MODAL: UPSELL / DESCONTO DO KIT PREMIUM (R$ 17,90)
+// ==========================================================================
+function inicializarModalDesconto() {
+  const modal = document.getElementById('modalDescontoPremium');
+  const btnFechar = document.getElementById('btnFecharModal');
+  const btnAbrir = document.querySelectorAll('.btn-abrir-popup-desconto');
+  const btnCheckoutDesconto = document.getElementById('btnCheckoutDesconto');
+  const btnContinuarBasico = document.getElementById('btnContinuarBasico');
+
+  if (!modal) return;
+
+  // Atualiza URLs com UTMs nos botões do modal
+  if (btnCheckoutDesconto) {
+    btnCheckoutDesconto.setAttribute('href', montarUrlComUtms(CONFIG.linkCheckoutDesconto));
+  }
+  if (btnContinuarBasico) {
+    btnContinuarBasico.setAttribute('href', montarUrlComUtms(CONFIG.linkCheckoutNormal));
+  }
+
+  function abrirModal(e) {
+    if (e) e.preventDefault();
+    modal.classList.add('visivel');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden'; // Impede rolagem do fundo
+  }
+
+  function fecharModal() {
+    modal.classList.remove('visivel');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Gatilhos de abertura ao clicar em qualquer botão do Kit Básico
+  btnAbrir.forEach(btn => {
+    btn.addEventListener('click', abrirModal);
+  });
+
+  // Fechamento pelo botão X
+  if (btnFechar) {
+    btnFechar.addEventListener('click', fecharModal);
+  }
+
+  // Fechamento ao clicar fora da caixa do modal
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      fecharModal();
+    }
+  });
+
+  // Fechamento pela tecla ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('visivel')) {
+      fecharModal();
+    }
   });
 }
 
@@ -294,6 +347,7 @@ function inicializarFaq() {
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
   inicializarLinksCheckout();
+  inicializarModalDesconto();
   inicializarObserverOferta();
   inicializarBarraMobile();
   inicializarQuiz();
