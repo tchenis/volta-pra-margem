@@ -201,7 +201,140 @@ h1, h2, h3, h4, .tipo-placa {
 @media (min-width: 640px) {
   .btn-compra.btn-auto {
     width: auto;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
+}
+
+/* --- CTAS INTERMEDIÁRIOS E SELOS DE SEGURANÇA --- */
+.cta-intermediario {
+  margin: 2.5rem auto 1rem auto;
+  text-align: center;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.cta-intermediario-frase {
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  font-size: 1.45rem;
+  color: var(--azul-rio);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+  line-height: 1.25;
+}
+
+.secao-hero .cta-intermediario-frase,
+.secao-mecanismo .cta-intermediario-frase,
+.secao-kit .cta-intermediario-frase,
+.secao-oferta .cta-intermediario-frase {
+  color: var(--areia);
+}
+
+.selos-micro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--grafite-claro);
+}
+
+.secao-hero .selos-micro,
+.secao-mecanismo .selos-micro,
+.secao-kit .selos-micro,
+.secao-oferta .selos-micro {
+  color: #C3D5DB;
+}
+
+.selos-micro span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.selos-micro svg {
+  width: 16px;
+  height: 16px;
+  color: var(--verde-agua);
+}
+
+/* Grade de Selos de Confiança e Garantia */
+.grade-selos-garantia {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 980px;
+  margin: 2.5rem auto 0 auto;
+}
+
+@media (min-width: 640px) {
+  .grade-selos-garantia {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .grade-selos-garantia {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.selo-garantia-card {
+  background-color: var(--azul-rio-profundo);
+  border: 1.5px solid rgba(31, 138, 122, 0.4);
+  border-radius: var(--raio-borda);
+  padding: 1.35rem 1.15rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  transition: transform var(--transicao-rapida), border-color var(--transicao-rapida);
+}
+
+.selo-garantia-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--verde-agua);
+}
+
+.selo-garantia-icone {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(31, 138, 122, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--verde-agua);
+  margin-bottom: 0.25rem;
+}
+
+.selo-garantia-icone svg {
+  width: 26px;
+  height: 26px;
+}
+
+.selo-garantia-titulo {
+  font-family: var(--font-titulo);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--areia);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.selo-garantia-desc {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: #C3D5DB;
+  margin-bottom: 0;
 }
 
 /* ==========================================================================
